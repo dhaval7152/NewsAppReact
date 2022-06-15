@@ -17,7 +17,18 @@ code {
   font-size: 40px;
   color: #895a5a;
   background-color: #deedfd75;
+  margin: 22px 0px 18px;
 }
 .start-100 {
   left: 84%!important;
+}
+#li1{
+  /* border: 3px solid red; */
+  padding-right: 12px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#aNames:hover{
+  font-size:15px;
+  background-color: #72c2c0;
+  
 }
