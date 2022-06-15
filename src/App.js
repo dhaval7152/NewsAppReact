@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react'
+import Navbar from './components/Navbar';
+import News from './components/News';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  // Link 
+} from "react-router-dom";
+export default class App extends Component {
+    render() {
+    return (
+      <div>
+        <Router>
+        <Navbar/>
+        {/* <News pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"technology"}/> */}
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        <Routes>
+              <Route exact path="/" element={<News key={Math.random()} pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"general"}/>}/>
+              <Route exact path="/business" element={<News key={Math.random()} pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"business"}/>}/>
+              <Route exact path="/entertainment" element={<News key={Math.random()} pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"entertainment"}/>}/> 
+              
+              <Route exact path="/health" element={<News key={Math.random()} pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"health"}/>}/> 
+              <Route exact path="/science" element={<News key={Math.random()} pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"science"}/>}/> 
+              <Route exact path="/sports" element={<News key={Math.random()} pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"sports"}/>}/> 
+              <Route exact path="/technology" element={<News key={Math.random()} pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"technology"}/>}/>
+
+        </Routes>
+
+        </Router> 
+      </div>
+    )
+  }
 }
-
-export default App;

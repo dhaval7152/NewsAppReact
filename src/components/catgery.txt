@@ -1,0 +1,9 @@
+<Route path="/business" element={<News pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"business"}/>}> </Route>
+<Route path="/entertainment" element={<News pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"entertainment"}/>}> </Route>
+<Route path="/general" element={<News pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"general"}/>}> </Route>
+<Route path="/health" element={<News pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"health"}/>}> </Route>
+<Route path="/science" element={<News pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"science"}/>}> </Route>
+<Route path="/sports" element={<News pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"sports"}/>}> </Route>
+<Route path="/technology" element={<News pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"technology"}/>}> </Route>
+
+https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=c2c8bf7be2b244f2860c8a8176699608&page=2&pagesize=20
