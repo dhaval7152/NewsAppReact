@@ -7,3 +7,12 @@
 <Route path="/technology" element={<News pagesize={20} api={"c2c8bf7be2b244f2860c8a8176699608"} category={"technology"}/>}> </Route>
 
 https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=c2c8bf7be2b244f2860c8a8176699608&page=2&pagesize=20
+
+https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=6a868683eaec4fb88d072c61a05b770e&page=2&pagesize=20
+
+
+  // apiKey1 = "617ca8be428a450f81ea8197ff9666dc";
+  // apiKey1 = "e1df0ab2da264e8fa79e0d3c77ff6416";
+  // apiKey2='5091eb7bfe75464ea24ea3d29a1d18a2';
+  // apiKey3='c2c8bf7be2b244f2860c8a8176699608';
+  // apiKey4='6a868683eaec4fb88d072c61a05b770e';
