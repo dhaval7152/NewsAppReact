@@ -3,24 +3,18 @@ import React, { Component } from "react";
 import Navbar from "./components/Navbar";
 import News from "./components/News";
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  // Link
-} from "react-router-dom";
-export default class App extends Component {
-  pagesize = 15;
-  apiKey1 = "92e60c6beffe447d9eb653d9f99985fd";
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
+const App=()=> {
+  const pagesize = 15;
+  const apiKey1 = process.env.REACT_APP_NEWS_KEY
 
   // state = {
   //   progress: 0,
   // };
 
   // setProgress = (progress) => {
-  //   this.setState({ progress: this.state.progress });
+  //   setState({ progress: state.progress });
   // };
-  render() {
     return (
       <div>
         <Router>
@@ -28,14 +22,14 @@ export default class App extends Component {
           {/* <LoadingBar
             height={3}
             color="#f11946"
-            progress={this.state.progress}
+            progress={state.progress}
           /> */}
           <Routes>
             <Route
               exact
               path="/"
               element={
-               <News setProgress={this.setProgress} key={Math.random()} pagesize={this.pagesize} api={this.apiKey1} category={"business"}/>
+               <News  key={Math.random()} pagesize={pagesize} api={apiKey1} category={"business"}/>
               }
             />
             <Route
@@ -44,8 +38,8 @@ export default class App extends Component {
               element={
                <News 
                   key={Math.random()}
-                  pagesize={this.pagesize}
-                  api={this.apiKey1}
+                  pagesize={pagesize}
+                  api={apiKey1}
                   category={"business"}
                 />
               }
@@ -56,8 +50,8 @@ export default class App extends Component {
               element={
                <News 
                   key={Math.random()}
-                  pagesize={this.pagesize}
-                  api={this.apiKey1}
+                  pagesize={pagesize}
+                  api={apiKey1}
                   category={"entertainment"}
                 />
               }
@@ -69,8 +63,8 @@ export default class App extends Component {
               element={
                <News 
                   key={Math.random()}
-                  pagesize={this.pagesize}
-                  api={this.apiKey1}
+                  pagesize={pagesize}
+                  api={apiKey1}
                   category={"health"}
                 />
               }
@@ -81,8 +75,8 @@ export default class App extends Component {
               element={
                <News 
                   key={Math.random()}
-                  pagesize={this.pagesize}
-                  api={this.apiKey1}
+                  pagesize={pagesize}
+                  api={apiKey1}
                   category={"science"}
                 />
               }
@@ -93,8 +87,8 @@ export default class App extends Component {
               element={
                <News 
                   key={Math.random()}
-                  pagesize={this.pagesize}
-                  api={this.apiKey1}
+                  pagesize={pagesize}
+                  api={apiKey1}
                   category={"sports"}
                 />
               }
@@ -105,15 +99,17 @@ export default class App extends Component {
               element={
                <News 
                   key={Math.random()}
-                  pagesize={this.pagesize}
-                  api={this.apiKey1}
+                  pagesize={pagesize}
+                  api={apiKey1}
                   category={"technology"}
                 />
+            
               }
             />
+            
           </Routes>
         </Router>
       </div>
     );
   }
-}
+  export default App;
